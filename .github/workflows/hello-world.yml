@@ -23,10 +23,10 @@ jobs:
         with:
           name: code
           path: .
-      - name: Build
-        run: ci/build-app.sh  
       - name: Test
         run: ci/unit-test-app.sh
+      - name: Build
+        run: ci/build-app.sh  
       - name: Upload Artifact
         uses: actions/download-artifact@v2
         with:
